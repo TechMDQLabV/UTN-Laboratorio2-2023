@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+#include <malloc.h>
 #include "alumno.h"
 
 #define DIM_ALUMNOS 100
@@ -12,12 +13,31 @@ void muestraArregloAlumnos(stAlumno a[], int v);
 void arreglo2archivo(stAlumno a[], int v, char nombreArchivo[]);
 void arregloCompleto2archivo(stAlumno a[], int v, char nombreArchivo[]);
 void muestraArchivoAlumnos(char nombreArchivo[]);
+void intercambio(int* a, int* b);
+int cuentaRegistros(char nombreArchivo[]);
+int cargaArreglo(stAlumno** a, char nombreArchivo[]);
 
 int main()
 {
+    int n1 = 10;
+    int n2 = 20;
+    int cantidadRegistros;
+    printf("\n n1 = %d - n2 = %d", n1, n2);
+    intercambio(&n1, &n2);
+    printf("\n n1 = %d - n2 = %d", n1, n2);
+
+    cantidadRegistros = cuentaRegistros(ARCH_ALUMNOS);
+    printf("\n Cantidad de registros: %d", cantidadRegistros);
+
+    stAlumno* arregloAlumnos = NULL;
+    int vArregloAlumnos = 0;
+    vArregloAlumnos = cargaArreglo(&arregloAlumnos, ARCH_ALUMNOS);
+
+    printf("\n <<<<< Listado de Alumnos de arreglo dinamico >>>>>\n");
+    muestraArregloAlumnos(arregloAlumnos, vArregloAlumnos);
+
     stAlumno alumnos[DIM_ALUMNOS];
     int vAlumnos = 0;
-
     vAlumnos = cargaArregloAlumnos(alumnos, DIM_ALUMNOS);
     printf("\n <<<<< Listado de Alumnos >>>>>\n");
     muestraArregloAlumnos(alumnos, vAlumnos);
@@ -76,4 +96,35 @@ void muestraArchivoAlumnos(char nombreArchivo[]){
         }
         fclose(archi);
     }
+}
+
+void intercambio(int* a, int* b){
+    int aux;
+    aux = *a;
+    *a = *b;
+    *b = aux;
+}
+
+int cuentaRegistros(char nombreArchivo[]){
+    FILE* archi = fopen(nombreArchivo, "rb");
+    int cantidad = 0;
+    if(archi){
+        fseek(archi, 0 , SEEK_END);
+        cantidad = ftell(archi)/sizeof(stAlumno);
+        fclose(archi);
+    }
+    return cantidad;
+}
+
+int cargaArreglo(stAlumno** a, char nombreArchivo[]){
+    int cant = cuentaRegistros(nombreArchivo);
+
+    (*a) = (stAlumno *) malloc(sizeof(stAlumno)*cant);
+
+    FILE* archi = fopen(nombreArchivo, "rb");
+    if(archi){
+        fread(*a, sizeof(stAlumno), cant, archi);
+        fclose(archi);
+    }
+    return cant;
 }

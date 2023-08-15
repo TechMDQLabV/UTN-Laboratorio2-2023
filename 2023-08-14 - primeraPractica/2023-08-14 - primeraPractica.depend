@@ -7,3 +7,17 @@
 	<stdlib.h>
 	<string.h>
 
+1692137643 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-14 - primerapractica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<malloc.h>
+	"alumno.h"
+
+1692137652 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-14 - primerapractica\pilaalumnos.c
+	"pilaAlumnos.h"
+
+1692137643 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-14 - primerapractica\pilaalumnos.h
+	<malloc.h>
+	"alumno.h"
+
