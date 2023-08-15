@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1692060563 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-14 - primerapractica\alumno.c
+	"alumno.h"
+
+1692058195 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-14 - primerapractica\alumno.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
