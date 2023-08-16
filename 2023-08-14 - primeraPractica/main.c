@@ -16,6 +16,7 @@ void muestraArchivoAlumnos(char nombreArchivo[]);
 void intercambio(int* a, int* b);
 int cuentaRegistros(char nombreArchivo[]);
 int cargaArreglo(stAlumno** a, char nombreArchivo[]);
+stAlumno* cargaArregloBis(int *v, char nombreArchivo[]);
 
 int main()
 {
@@ -127,4 +128,18 @@ int cargaArreglo(stAlumno** a, char nombreArchivo[]){
         fclose(archi);
     }
     return cant;
+}
+
+stAlumno* cargaArregloBis(int *v, char nombreArchivo[]){
+    int cant = cuentaRegistros(nombreArchivo);
+
+    stAlumno *a = (stAlumno *) malloc(sizeof(stAlumno)*cant);
+
+    FILE* archi = fopen(nombreArchivo, "rb");
+    if(archi){
+        fread(a, sizeof(stAlumno), cant, archi);
+        fclose(archi);
+    }
+    *v = cant;
+    return a;
 }
