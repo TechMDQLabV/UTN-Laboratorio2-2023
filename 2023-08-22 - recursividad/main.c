@@ -93,11 +93,11 @@ int capicua(int a[], int i, int u){
     return rta;
 }
 
-int capicua(int a[], int i, int u){
+int capicua1(int a[], int i, int u){
     int rta=1;
     if(i<u){
         if(a[i]==a[u]){
-            rta=capicua(a, i+1, u-1);
+            rta=capicua1(a, i+1, u-1);
         }else{
             rta=0;
         }
