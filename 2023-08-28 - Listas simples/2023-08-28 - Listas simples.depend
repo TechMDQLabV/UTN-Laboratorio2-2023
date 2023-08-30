@@ -1,0 +1,60 @@
+# depslib dependency file v1.0
+1693346843 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.c
+	<stdio.h>
+	<stdlib.h>
+	"listaCliente.h"
+
+1693351869 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.h
+	"cliente.h"
+
+1597452066 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\cliente.h
+
+1693352486 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\main.c
+	<stdio.h>
+	<stdlib.h>
+	"listaCliente.h"
+
+1693347015 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"archivoClientes.h"
+	"cliente.h"
+
+1597795001 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\archivoclientes.h
+	"cliente.h"
+
+1598056382 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\archivoclientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+	"archivoClientes.h"
+
+1571670222 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\utilidades.c
+	"utilidades.h"
+
+1571670228 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\utilidades.h
+	<stdlib.h>
+	<stdio.h>
+
+1491400449 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\gotoxy.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1605134730 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\registroarchivo.c
+	"registroArchivo.h"
+
+1600173009 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\registroarchivo.h
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	<time.h>
+	"cliente.h"
+	"utilidades.h"
+	"gotoxy.h"
+
+1491399894 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\gotoxy.h
+
