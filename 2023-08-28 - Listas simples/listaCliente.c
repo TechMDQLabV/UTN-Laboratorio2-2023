@@ -100,3 +100,66 @@ nodo* agregarEnOrdenDni(nodo* lista, nodo* nuevo){
 
     return lista;
 }
+
+nodo* buscarUltimo(nodo* lista){
+    nodo* aux = lista;
+    while(aux->sig){  /// while(aux->sig != NULL)
+        aux = aux->sig;
+    }
+    return aux;
+}
+
+nodo* agregarAlFinal(nodo* lista, nodo* nuevo){
+    if(!lista){
+        lista = nuevo;
+    }else{
+        nodo* ultimo = buscarUltimo(lista);
+        ultimo->sig = nuevo;
+    }
+    return lista;
+}
+
+nodo* borrarLista(nodo* lista){
+    nodo* proximo = NULL;
+    nodo* aux = lista;
+    while(aux){
+        proximo = aux->sig;
+        free(aux);
+        aux = proximo;
+    }
+    return aux;
+}
+
+nodo* borrarNodo(nodo* lista, char dni[]){
+    nodo* aux = NULL;
+    if(lista && strcmp(lista->dato.persona.dni, dni)==0){
+        aux = lista;
+        lista = lista->sig;
+        free(aux);
+    }else{
+        aux = lista->sig;
+        nodo* ante = lista;
+        while(aux && strcmp(aux->dato.persona.dni, dni)!=0){
+            ante = aux;
+            aux = aux->sig;
+        }
+        if(aux){
+            ante->sig = aux->sig;
+            free(aux);
+        }
+    }
+
+    return lista;
+}
+
+nodo* buscarNodoPorDni(nodo* lista, char dni[]){
+    nodo* aux = lista;
+    while(aux && strcmp(aux->dato.persona.dni, dni)!=0){
+        aux = aux->sig;
+    }
+    return aux;
+}
+
+
+
+

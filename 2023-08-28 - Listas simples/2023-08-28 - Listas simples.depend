@@ -1,15 +1,15 @@
 # depslib dependency file v1.0
-1693346843 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.c
+1693873282 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.c
 	<stdio.h>
 	<stdlib.h>
 	"listaCliente.h"
 
-1693351869 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.h
+1693873376 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.h
 	"cliente.h"
 
 1597452066 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\cliente.h
 
-1693352486 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\main.c
+1693873282 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\main.c
 	<stdio.h>
 	<stdlib.h>
 	"listaCliente.h"

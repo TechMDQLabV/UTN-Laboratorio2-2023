@@ -3,9 +3,9 @@
 
 #include "cliente.h"
 
-typedef struct{
+typedef struct _nodo{
     stCliente dato;
-    struct nodo* sig;
+    struct _nodo* sig;
 }nodo;
 
 nodo* inicLista();

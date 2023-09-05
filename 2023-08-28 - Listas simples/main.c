@@ -60,3 +60,22 @@ nodo* archivoClientes2lista(char nombreArchivo[], nodo* lista){
     }
     return lista;
 }
+
+int lista2arreglo(nodo* lista, stCliente clientes[], int v, int dim){
+    while(lista && v < dim){
+        clientes[v] = lista->dato;
+        v++;
+        lista = lista->sig;
+    }
+    return v;
+}
+
+nodo* arrego2lista(stCliente clientes[], int v, nodo* lista, char dni[]){
+    for(int i = 0; i < v; i++){
+        if(atoi(clientes[i].persona.dni) > atoi(dni)){
+            lista = agregarAlFinal(lista, crearNodo(clientes[i]));
+        }
+    }
+
+    return lista;
+}
