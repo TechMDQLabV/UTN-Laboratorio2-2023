@@ -101,6 +101,27 @@ nodo* agregarEnOrdenDni(nodo* lista, nodo* nuevo){
     return lista;
 }
 
+nodo* agregarEnOrdenPorApellido(nodo* lista, nodo* nuevo){
+    if(!lista){  /// if(lista == NULL)
+        lista = nuevo;
+    }else{
+        if(strcmp(nuevo->dato.persona.apellido, lista->dato.persona.apellido)<0){
+            lista=agregarAlPrincipio(lista, nuevo);
+        }else{
+            nodo* ante = lista;
+            nodo* aux = lista->sig;
+            while(aux && strcmp(nuevo->dato.persona.apellido, aux->dato.persona.apellido) > 0){
+                ante = aux;
+                aux = aux->sig;
+            }
+            nuevo->sig = aux;
+            ante->sig = nuevo;
+        }
+    }
+
+    return lista;
+}
+
 nodo* buscarUltimo(nodo* lista){
     nodo* aux = lista;
     while(aux->sig){  /// while(aux->sig != NULL)
@@ -160,6 +181,37 @@ nodo* buscarNodoPorDni(nodo* lista, char dni[]){
     return aux;
 }
 
+nodo* invertirLista(nodo* lista){
+    nodo* listaInvertida = NULL;
+    nodo* aux = NULL;
+    while(lista){
+        aux = lista;
+        lista = lista->sig;
+        aux->sig = NULL;
+        listaInvertida = agregarAlPrincipio(listaInvertida, aux);
+    }
+    return listaInvertida;
+}
 
+nodo* ordenarListaPorApellido(nodo* lista){
+    nodo* listaOrdenada = NULL;
+    nodo* aux = NULL;
+    while(lista){
+        aux = lista;
+        lista = lista->sig;
+        aux->sig = NULL;
+        listaOrdenada = agregarEnOrdenPorApellido(listaOrdenada, aux);
+    }
+    return listaOrdenada;
+}
 
+stCliente verPrimero(nodo* lista){
+    return lista->dato;
+}
 
+nodo* borrarPrimerNodo(nodo* lista){
+    nodo* aux = lista;
+    lista = lista->sig;
+    free(aux);
+    return lista;
+}

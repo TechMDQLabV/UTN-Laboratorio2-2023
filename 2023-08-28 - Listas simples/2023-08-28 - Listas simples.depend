@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1693873282 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.c
+1693960138 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.c
 	<stdio.h>
 	<stdlib.h>
 	"listaCliente.h"
 
-1693873376 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.h
+1693960360 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.h
 	"cliente.h"
 
 1597452066 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\cliente.h
@@ -57,4 +57,12 @@
 	"gotoxy.h"
 
 1491399894 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\gotoxy.h
+
+1693958493 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\pila.c
+	"pila.h"
+
+1693960137 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\pila.h
+	<stdio.h>
+	<stdlib.h>
+	"listaCliente.h"
 
