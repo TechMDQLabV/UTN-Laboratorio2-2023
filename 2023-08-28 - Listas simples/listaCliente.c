@@ -215,3 +215,27 @@ nodo* borrarPrimerNodo(nodo* lista){
     free(aux);
     return lista;
 }
+
+nodo* intercalarListas(nodo* listaA, nodo* listaB){
+    nodo* listaIntercalada = NULL;
+    nodo* aux = NULL;
+    while(listaA && listaB){
+        if(strcmp(listaA->dato.persona.apellido, listaB->dato.persona.apellido) < 0){
+            aux = listaA;
+            listaA = listaA->sig;
+
+        }else{
+            aux = listaB;
+            listaB = listaB->sig;
+        }
+        aux->sig = NULL;
+        listaIntercalada = agregarAlFinal(listaIntercalada, aux);
+    }
+    if(listaA){
+        listaIntercalada = agregarAlFinal(listaIntercalada, listaA);
+    }
+    if(listaB){
+        listaIntercalada = agregarAlFinal(listaIntercalada, listaB);
+    }
+    return listaIntercalada;
+}

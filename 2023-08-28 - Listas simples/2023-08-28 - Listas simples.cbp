@@ -31,6 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Pila.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Pila.h" />
 		<Unit filename="archivoClientes.c">
 			<Option compilerVar="CC" />
 		</Unit>

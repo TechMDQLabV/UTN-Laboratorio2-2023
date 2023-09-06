@@ -21,5 +21,6 @@ int cuentaNodosRecursivo(nodo* lista);
 int cuentaNodosRecursivoConFiltro(nodo* lista);
 stCliente verPrimero(nodo* lista);
 nodo* borrarPrimerNodo(nodo* lista);
+nodo* intercalarListas(nodo* listaA, nodo* listaB);
 
 #endif // LISTACLIENTE_H_INCLUDED
