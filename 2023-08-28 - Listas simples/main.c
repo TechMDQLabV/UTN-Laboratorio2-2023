@@ -78,7 +78,7 @@ int lista2arreglo(nodo* lista, stCliente clientes[], int v, int dim){
     return v;
 }
 
-nodo* arrego2lista(stCliente clientes[], int v, nodo* lista, char dni[]){
+nodo* arreglo2lista(stCliente clientes[], int v, nodo* lista, char dni[]){
     for(int i = 0; i < v; i++){
         if(atoi(clientes[i].persona.dni) > atoi(dni)){
             lista = agregarAlFinal(lista, crearNodo(clientes[i]));

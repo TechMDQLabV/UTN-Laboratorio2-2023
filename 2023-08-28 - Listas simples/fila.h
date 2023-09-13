@@ -6,8 +6,8 @@
 #include "lista2Cliente.h"
 
 typedef struct{
-    struct nodo2* inicio;
-    struct nodo2* fin;
+    nodo2* inicio;
+    nodo2* fin;
 }Fila;
 
 void inicFila(Fila* fila);
