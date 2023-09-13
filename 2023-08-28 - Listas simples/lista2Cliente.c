@@ -97,3 +97,19 @@ nodo2* agregarEnOrdenDPorDni(nodo2* lista, nodo2* nuevo){
 
     return lista;
 }
+
+stCliente verPrimeroDoble(nodo2* lista){
+    return lista->dato;
+}
+
+nodo2 borrarPrimerNodoDoble(nodo2* lista){
+    if(lista){
+        nodo2* aBorrar = lista;
+        lista = lista->sig;
+        free(aBorrar);
+        if(lista){
+            lista->ante = NULL;
+        }
+    }
+    return lista;
+}

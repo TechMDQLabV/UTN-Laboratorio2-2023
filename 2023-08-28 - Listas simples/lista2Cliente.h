@@ -23,4 +23,7 @@ nodo2* agregarAlFinalDoble(nodo2* lista, stCliente dato);
 nodo2* agregarAlFinalD(nodo2* lista, nodo2* nuevo);
 nodo2* agregarEnOrdenDoblePorDni(nodo2* lista, stCliente dato);
 nodo2* agregarEnOrdenDPorDni(nodo2* lista, nodo2* nuevo);
+stCliente verPrimeroDoble(nodo2* lista);
+nodo2 borrarPrimerNodoDoble(nodo2* lista);
+
 #endif // LISTA2CLIENTE_H_INCLUDED
