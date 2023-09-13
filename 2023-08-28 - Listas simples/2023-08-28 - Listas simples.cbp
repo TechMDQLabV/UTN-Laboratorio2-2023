@@ -43,10 +43,18 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="cliente.h" />
+		<Unit filename="fila.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fila.h" />
 		<Unit filename="gotoxy.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="gotoxy.h" />
+		<Unit filename="lista2Cliente.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lista2Cliente.h" />
 		<Unit filename="listaCliente.c">
 			<Option compilerVar="CC" />
 		</Unit>
