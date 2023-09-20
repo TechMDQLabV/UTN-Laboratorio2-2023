@@ -13,7 +13,7 @@ typedef struct _nodo2{
 }nodo2;
 
 nodo2* inicListaDoble();
-nodo2* crearNodo2(stCliente dato);
+nodo2* crearNodoDoble(stCliente dato);
 nodo2* agregarAlPrincipioDoble(nodo2* lista, stCliente dato);
 nodo2* agregarAlPpioDoble(nodo2* lista, nodo2* nuevo);
 void muestraNodo2(nodo2* nodo);
@@ -24,6 +24,7 @@ nodo2* agregarAlFinalD(nodo2* lista, nodo2* nuevo);
 nodo2* agregarEnOrdenDoblePorDni(nodo2* lista, stCliente dato);
 nodo2* agregarEnOrdenDPorDni(nodo2* lista, nodo2* nuevo);
 stCliente verPrimeroDoble(nodo2* lista);
-nodo2 borrarPrimerNodoDoble(nodo2* lista);
+nodo2* borrarPrimerNodoDoble(nodo2* lista);
+
 
 #endif // LISTA2CLIENTE_H_INCLUDED

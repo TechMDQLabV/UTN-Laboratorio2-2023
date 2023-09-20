@@ -1,18 +1,20 @@
 # depslib dependency file v1.0
-1693960360 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.c
+1695245211 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.c
 	<stdio.h>
 	<stdlib.h>
 	"listaCliente.h"
 
-1694036868 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.h
+1695245211 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\listacliente.h
 	"cliente.h"
 
 1597452066 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\cliente.h
 
-1693873282 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\main.c
+1695245332 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\main.c
 	<stdio.h>
 	<stdlib.h>
 	"listaCliente.h"
+	"lista2Cliente.h"
+	"fila.h"
 
 1693347015 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\cliente.c
 	<stdio.h>
@@ -58,11 +60,28 @@
 
 1491399894 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\gotoxy.h
 
-1693958493 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\pila.c
+1695245353 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\pila.c
 	"pila.h"
 
 1693960137 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\pila.h
 	<stdio.h>
 	<stdlib.h>
 	"listaCliente.h"
+
+1694565502 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\fila.c
+	"fila.h"
+
+1694641782 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\fila.h
+	<stdio.h>
+	<stdlib.h>
+	"lista2Cliente.h"
+
+1695245426 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\lista2cliente.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+
+1695245402 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\2023-08-28 - listas simples\lista2cliente.c
+	"lista2Cliente.h"
 

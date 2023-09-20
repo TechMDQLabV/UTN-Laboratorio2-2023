@@ -2,16 +2,22 @@
 #include <stdlib.h>
 #include "listaCliente.h"
 #include "lista2Cliente.h"
+#include "fila.h"
 
 #define AR_CLIENTES "clientes.dat"
 #define ESC 27
 
 void muestraMenu();
 nodo* archivoClientes2lista(char nombreArchivo[], nodo* lista);
+nodo2* listaAlista2(nodo* lista, nodo2* lista2);
+void archivo2fila(char nombreArchivo[], Fila* f);
 
 int main()
 {
     char opcion;
+    Fila filita;
+    inicFila(&filita);
+    archivo2fila(AR_CLIENTES, &filita);
     nodo* lista = inicLista();
     nodo2* lista2 = inicListaDoble();
 
@@ -30,6 +36,7 @@ int main()
                 break;
             case 50:
                 lista = archivoClientes2lista(AR_CLIENTES, lista);
+                int cont = cuentaNodosRecursivo(lista);
                 break;
             case 51:
                 muestraListaRecursiva(lista);
@@ -62,7 +69,9 @@ nodo* archivoClientes2lista(char nombreArchivo[], nodo* lista){
     stCliente cliente;
     if(archi){
         while(fread(&cliente, sizeof(stCliente), 1, archi) > 0){
-            lista = agregarAlPrincipio(lista, crearNodo(cliente));
+            if(atoi(cliente.persona.dni)%2==0){
+                lista = agregarAlPrincipio(lista, crearNodo(cliente));
+            }
         }
         fclose(archi);
     }
@@ -98,4 +107,16 @@ nodo2* listaAlista2(nodo* lista, nodo2* lista2){
     }
 
     return lista2;
+}
+
+void archivo2fila(char nombreArchivo[], Fila* f){
+    stCliente cliente;
+    FILE* archi = fopen(nombreArchivo, "rb");
+
+    if(archi){
+        while(fread(&cliente, sizeof(stCliente), 1, archi) > 0){
+            agregar(f, cliente);
+        }
+        fclose(archi);
+    }
 }

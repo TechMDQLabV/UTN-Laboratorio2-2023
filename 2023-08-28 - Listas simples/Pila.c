@@ -9,11 +9,11 @@ void apilar(Pila* pila, stCliente dato){
 }
 
 stCliente tope(Pila* pila){
-    return verPrimero(*pila);
+    return verPrimeroLista(*pila);
 }
 
 stCliente desapilar(Pila* pila){
-    stCliente cli = verPrimero(*pila);
+    stCliente cli = verPrimeroLista(*pila);
     (*pila)=borrarPrimerNodo(*pila);
     return cli;
 }

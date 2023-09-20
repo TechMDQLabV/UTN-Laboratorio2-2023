@@ -19,8 +19,9 @@ void muestraListaRecursiva(nodo* lista);
 int cuentaNodos(nodo* lista);
 int cuentaNodosRecursivo(nodo* lista);
 int cuentaNodosRecursivoConFiltro(nodo* lista);
-stCliente verPrimero(nodo* lista);
+stCliente verPrimeroLista(nodo* lista);
 nodo* borrarPrimerNodo(nodo* lista);
 nodo* intercalarListas(nodo* listaA, nodo* listaB);
+nodo* buscarMenorLista(nodo* lista);
 
 #endif // LISTACLIENTE_H_INCLUDED

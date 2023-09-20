@@ -80,6 +80,15 @@ int cuentaNodosRecursivoConFiltro(nodo* lista){
     return cont;
 }
 
+int sumaNodosRecursivo(nodo* lista){
+    int total = 0;
+    if(lista){
+        total = lista->dato.id + sumaNodosRecursivo(lista->sig);
+    }
+    return total;
+}
+
+
 nodo* agregarEnOrdenDni(nodo* lista, nodo* nuevo){
     if(!lista){  /// if(lista == NULL)
         lista = nuevo;
@@ -205,7 +214,7 @@ nodo* ordenarListaPorApellido(nodo* lista){
     return listaOrdenada;
 }
 
-stCliente verPrimero(nodo* lista){
+stCliente verPrimeroLista(nodo* lista){
     return lista->dato;
 }
 
@@ -238,4 +247,17 @@ nodo* intercalarListas(nodo* listaA, nodo* listaB){
         listaIntercalada = agregarAlFinal(listaIntercalada, listaB);
     }
     return listaIntercalada;
+}
+
+nodo* buscarMenorLista(nodo* lista){
+    nodo* menor = NULL;
+    if(lista->sig){
+        menor = buscarMenorLista(lista->sig);
+        if(atoi(lista->dato.persona.dni) < atoi(menor->dato.persona.dni)){
+            menor = lista;
+        }
+    }else{
+        menor = lista;
+    }
+    return menor;
 }

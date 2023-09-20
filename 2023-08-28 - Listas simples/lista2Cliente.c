@@ -12,7 +12,7 @@ nodo2* crearNodoDoble(stCliente dato){
     return nuevo;
 }
 
-nodo* agregarAlPrincipioDoble(nodo2* lista, stCliente dato){
+nodo2* agregarAlPrincipioDoble(nodo2* lista, stCliente dato){
     return agregarAlPpioDoble(lista, crearNodoDoble(dato));
 }
 
@@ -53,7 +53,7 @@ nodo2* buscarUltimoDoble(nodo2* lista){
 }
 
 nodo2* agregarAlFinalDoble(nodo2* lista, stCliente dato){
-    return agregarAlFinalD(lista, crearNodo2(dato));
+    return agregarAlFinalD(lista, crearNodoDoble(dato));
 }
 
 nodo2* agregarAlFinalD(nodo2* lista, nodo2* nuevo){
@@ -69,7 +69,7 @@ nodo2* agregarAlFinalD(nodo2* lista, nodo2* nuevo){
 }
 
 nodo2* agregarEnOrdenDoblePorDni(nodo2* lista, stCliente dato){
-    return agregarEnOrdenDPorDni(lista, crearNodo2(dato));
+    return agregarEnOrdenDPorDni(lista, crearNodoDoble(dato));
 }
 
 nodo2* agregarEnOrdenDPorDni(nodo2* lista, nodo2* nuevo){
@@ -102,7 +102,7 @@ stCliente verPrimeroDoble(nodo2* lista){
     return lista->dato;
 }
 
-nodo2 borrarPrimerNodoDoble(nodo2* lista){
+nodo2* borrarPrimerNodoDoble(nodo2* lista){
     if(lista){
         nodo2* aBorrar = lista;
         lista = lista->sig;
