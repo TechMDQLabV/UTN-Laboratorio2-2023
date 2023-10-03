@@ -62,6 +62,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="nodoArbol.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nodoArbol.h" />
 		<Unit filename="registroArchivo.c">
 			<Option compilerVar="CC" />
 		</Unit>

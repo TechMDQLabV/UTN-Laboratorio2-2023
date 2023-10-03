@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1601422158 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\garguirsergioparcial1\persona.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"persona.h"
+
+1601422170 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\garguirsergioparcial1\persona.h
+
+1695853169 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\garguirsergioparcial1\lista.c
+	"lista.h"
+
+1695853169 d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\garguirsergioparcial1\lista.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"persona.h"
+
+1695853918 source:d:\developer\c\0 utn repositorios\utn-laboratorio2-2023\garguirsergioparcial1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+
