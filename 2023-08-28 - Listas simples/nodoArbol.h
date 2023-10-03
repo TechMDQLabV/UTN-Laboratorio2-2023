@@ -18,5 +18,7 @@ void preOrden(nodoArbol* arbol);
 void inOrden(nodoArbol* arbol);
 void postOrden(nodoArbol* arbol);
 nodoArbol* buscaNodoArbol(nodoArbol* arbol, char dni[]);
+int cuentaNodosArbol(nodoArbol* arbol);
+int sumaNodosArbol(nodoArbol* arbol);
 
 #endif // NODOARBOL_H_INCLUDED
