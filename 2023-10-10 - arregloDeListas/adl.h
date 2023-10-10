@@ -2,14 +2,15 @@
 #define ADL_H_INCLUDED
 
 #include "nodoAlumno.h"
+#include <string.h>
 
 typedef struct{
     char materia[20];
     nodoAlumno* listaAlumnos;
 }celda;
 
-int alta(celda adl[], int v, int dim, char materia[], stAlumno alumno);
+int alta(celda adl[], int v, char materia[], stAlumno alumno);
 int buscaPos(celda adl[], int v, char materia[]);
-int agragar(celda adl[], int v, int dim, char materia[]);
+int agregar(celda adl[], int v, char materia[]);
 
 #endif // ADL_H_INCLUDED
