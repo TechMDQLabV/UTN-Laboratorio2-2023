@@ -88,6 +88,18 @@ int cuentaNodosArbol(nodoArbol* arbol){
     return cont;
 }
 
+int cuentaNodosArbolConFiltro(nodoArbol* arbol, char dni[]){
+    int cont = 0;
+    if(arbol){
+        if(strcmp(dni, arbol->dato.persona.dni) == 0){
+            cont = 1 + cuentaNodosArbol(arbol->izq) + cuentaNodosArbol(arbol->der);
+        }else{
+            cont = cuentaNodosArbol(arbol->izq) + cuentaNodosArbol(arbol->der);
+        }
+    }
+    return cont;
+}
+
 int sumaNodosArbol(nodoArbol* arbol){
     int total = 0;
     if(arbol){
