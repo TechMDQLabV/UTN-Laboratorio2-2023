@@ -3,9 +3,11 @@
 
 #include "materia.h"
 #include "adl.h"
+
 #define DIM 100
 
 int cargaArreglo(char nombreArchivo[], celda adl[], int dim);
+stAlumno getAlumno(stMateria materia);
 
 int main()
 {

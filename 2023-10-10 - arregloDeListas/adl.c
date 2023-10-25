@@ -12,7 +12,7 @@ int alta(celda adl[], int v, char materia[], stAlumno alumno){
 }
 
 int buscaPos(celda adl[], int v, char materia[]){
-    int pos = -!;
+    int pos = -1;
     int i = 0;
     while(i < v && pos == -1){
         if(strcmp(adl[i].materia, materia)==0){
@@ -24,8 +24,17 @@ int buscaPos(celda adl[], int v, char materia[]){
 }
 
 int agragar(celda adl[], int v, char materia[]){
-    strcpy(adl[v].materia, materia);
+    str
+    cpy(adl[v].materia, materia);
     adl[v].listaAlumnos = inicLista();
     v++;
     return v;
+}
+
+void muestraAdl(celda adl[], int v){
+    for(int i=0;i<v;i++){
+        printf("Materia: %s", adl[i].materia);
+        muestraListaAlumno(adl[i].listaAlumnos);
+        printf("_____________________________________________");
+    }
 }
